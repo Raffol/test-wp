@@ -1,71 +1,4 @@
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <?php wp_head();?>   <!-- для подключения -->
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="seo & digital marketing">
-    <meta name="keywords" content="marketing,digital marketing,creative, agency, startup,promodise,onepage, clean, modern,seo,business, company">
-    <meta name="author" content="dreambuzz">
-
-    <title>Promodise - seo and digital marketing solution </title>
-
-</head>
-
-<body data-spy="scroll" data-target=".fixed-top">
-
-    <nav class="navbar navbar-expand-lg fixed-top trans-navigation">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="<?php get_template_directory_uri();?>/assets/img/logo.png" alt="" class="img-fluid b-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="fa fa-bars"></i>
-                </span>
-              </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                <ul class="navbar-nav ">
-                   <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Home
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-                            <a class="dropdown-item " href="index.html">
-    Home-1
-                            </a>
-                            <a class="dropdown-item " href="index-2.html">
-    Home-2
-                            </a>
-                            <a class="dropdown-item " href="index-3.html" target="blank">
-    Onepage
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="service.html">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="pricing.html">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--MAIN HEADER AREA END -->
-
+<?php get_header();?>
     <!--MAIN BANNER AREA START -->
     <div class="banner-area banner-3">
         <div class="overlay dark-overlay"></div>
@@ -102,7 +35,7 @@
             <div class="row">
                 <div class="col-lg-5  d-none d-lg-block col-sm-12">
                     <div class="intro-img">
-                        <img src="<?php get_template_directory_uri();?>/assets/img/banner/why-choose.png" alt="intro-img" class="img-fluid">
+                        <img src="assets/img/banner/why-choose.png" alt="intro-img" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12 col-sm-12 ">
@@ -209,7 +142,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>Video Marketing</h4>
@@ -220,7 +153,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box ">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>Email Marketing</h4>
@@ -231,7 +164,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/003-task.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/003-task.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>SEO optimization</h4>
@@ -243,7 +176,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>Custom Website</h4>
@@ -254,7 +187,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/006-analytics.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/006-analytics.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>Content Growth</h4>
@@ -265,7 +198,7 @@
                 <div class="col-lg-4 col-sm-6 col-md-6">
                     <div class="service-box">
                         <div class="service-img-icon">
-                            <img src="<?php get_template_directory_uri();?>/assets/img/icon/004-hiring.png" alt="service-icon" class="img-fluid">
+                            <img src="assets/img/icon/004-hiring.png" alt="service-icon" class="img-fluid">
                         </div>
                         <div class="service-inner">
                             <h4>Link Building </h4>
@@ -392,7 +325,7 @@
                                         <div class="testimonial-content style-2">
                                             <div class="author-info ">
                                                 <div class="author-img">
-                                                    <img src="<?php get_template_directory_uri();?>/assets/img/author/3b.jpg" alt="" class="img-fluid">
+                                                    <img src="assets/img/author/3b.jpg" alt="" class="img-fluid">
                                                 </div>
                                             </div>
 
@@ -411,7 +344,7 @@
                                         <div class="testimonial-content style-2">
                                             <div class="author-info ">
                                                 <div class="author-img">
-                                                    <img src="<?php get_template_directory_uri();?>/assets/img/author/5b.jpg" alt="" class="img-fluid">
+                                                    <img src="assets/img/author/5b.jpg" alt="" class="img-fluid">
                                                 </div>
                                             </div>
 
@@ -432,7 +365,7 @@
                                         <div class="testimonial-content style-2">
                                             <div class="author-info ">
                                                 <div class="author-img">
-                                                    <img src="<?php get_template_directory_uri();?>/assets/img/author/3b.jpg" alt="" class="img-fluid">
+                                                    <img src="assets/img/author/3b.jpg" alt="" class="img-fluid">
                                                 </div>
                                             </div>
 
@@ -459,16 +392,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-                    <img src="<?php get_template_directory_uri();?>/assets/img/clients/client01.png" alt="partner" class="img-fluid">
+                    <img src="assets/img/clients/client01.png" alt="partner" class="img-fluid">
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-                    <img src="<?php get_template_directory_uri();?>/assets/img/clients/client06.png" alt="partner" class="img-fluid">
+                    <img src="assets/img/clients/client06.png" alt="partner" class="img-fluid">
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-                     <img src="<?php get_template_directory_uri();?>/assets/img/clients/client04.png" alt="partner" class="img-fluid">
+                     <img src="assets/img/clients/client04.png" alt="partner" class="img-fluid">
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-                    <img src="<?php get_template_directory_uri();?>/assets/img/clients/client05.png" alt="partner" class="img-fluid">
+                    <img src="assets/img/clients/client05.png" alt="partner" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -492,7 +425,7 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="<?php get_template_directory_uri();?>/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                         <div class="blog-text">
                             <h6 class="author-name"><span>Tips and tricks</span>john Doe</h6>
                             <a href="blog-single.html" class="h5 my-2 d-inline-block">
@@ -504,7 +437,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="<?php get_template_directory_uri();?>/assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
                         <div class="blog-text">
                             <h6 class="author-name"><span>Branding</span>john Doe</h6>
                             <a href="blog-single.html" class="h5 my-2 d-inline-block">
@@ -516,7 +449,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="<?php get_template_directory_uri();?>/assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
                         <div class="blog-text">
                             <h6 class="author-name"><span>Marketing</span>john Doe</h6>
                             <a href="blog-single.html" class="h5 my-2 d-inline-block">
@@ -570,62 +503,7 @@
         </section>
         <!--  COUNTER AREA END  -->
 
-    <!--  FOOTER AREA START  -->
-    <section id="footer" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-8 col-md-8">
-                    <div class="footer-widget footer-link">
-                        <h4>We concern about you<br> to grow business rapidly.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam hic non sunt recusandae atque unde saepe nihil earum voluptatibus aliquid optio suscipit nobis quia excepturi vel quod, iure quae.</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-sm-4 col-md-4">
-                    <div class="footer-widget footer-link">
-                        <h4>About</h4>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-6 col-md-6">
-                    <div class="footer-widget footer-link">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">How it Works</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Report Bug</a></li>
-                            <li><a href="#">License</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="footer-widget footer-text">
-                        <h4>Our location</h4>
-                        <p class="mail"><span>Mail:</span> promdise@gmail.com</p>
-                        <p><span>Phone :</span>+202-277-3894</p>
-                        <p><span>Location:</span> 455 West Orchard Street Kings Mountain, NC 28086,NOC building</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="footer-copy">
-                        © 2018 Promodise inc. All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--  FOOTER AREA END  -->
+    <?php get_footer();?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
