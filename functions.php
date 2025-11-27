@@ -66,4 +66,78 @@ function testprojectwp_script()
         'main-style',
         get_stylesheet_uri()
     );
+    //Подключение JS
+    wp_enqueue_script('jquery');
+
+    // contact.js
+    wp_enqueue_script(
+        'contact',
+        get_template_directory_uri() . '/assets/js/contact.js',
+        ['jquery'],
+        null,
+        true
+    );
+
+    // Popper
+    wp_enqueue_script(
+        'popper',
+        get_template_directory_uri() . '/assets/bootstrap/js/popper.min.js',
+        [],
+        null,
+        true
+    );
+
+    // Bootstrap
+    wp_enqueue_script(
+        'bootstrap',
+        get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js',
+        ['jquery', 'popper'],
+        null,
+        true
+    );
+
+    // Waypoints
+    wp_enqueue_script(
+        'waypoints',
+        get_template_directory_uri() . '/assets/js/jquery.waypoints.js',
+        ['jquery'],
+        null,
+        true
+    );
+
+    // CounterUp
+    wp_enqueue_script(
+        'counterup',
+        get_template_directory_uri() . '/assets/js/jquery.counterup.min.js',
+        ['jquery', 'waypoints'],
+        null,
+        true
+    );
+
+    // jQuery easing
+    wp_enqueue_script(
+        'easing',
+        get_template_directory_uri() . '/assets/js/jquery.easing.1.3.js',
+        ['jquery'],
+        null,
+        true
+    );
+
+    // WOW.js
+    wp_enqueue_script(
+        'wow',
+        get_template_directory_uri() . '/assets/js/wow.min.js',
+        [],
+        null,
+        true
+    );
+
+    // custom.js (твой основной скрипт)
+    wp_enqueue_script(
+        'custom-js',
+        get_template_directory_uri() . '/assets/js/custom.js',
+        ['jquery', 'bootstrap'],
+        filemtime( get_template_directory() . '/assets/js/custom.js' ),
+        true
+    );
 }
