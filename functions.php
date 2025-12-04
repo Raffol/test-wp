@@ -1,6 +1,18 @@
 <?php
-//Подключение стилей
+//Лого сайта
+if (!function_exists('testprojectwp_setup')){
+    function testprojectwp_setup(){
+        add_theme_support( 'custom-logo', [
+            'height'      => 50,
+            'width'       => 190,
+            'flex-width'  => false,
+            'flex-height' => false,
+            'header-text' => '',
+        ] );
+    }
+    add_action('wp_enqueue_scripts', 'testprojectwp_script');
 
+}
 // Подключение стилей темы
 add_action('wp_enqueue_scripts', 'testprojectwp_script');
 function testprojectwp_script()
