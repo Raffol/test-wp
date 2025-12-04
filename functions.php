@@ -2,6 +2,7 @@
 //Лого сайта
 if (!function_exists('testprojectwp_setup')){
     function testprojectwp_setup(){
+        //добавляем лого
         add_theme_support( 'custom-logo', [
             'height'      => 50,
             'width'       => 190,
@@ -9,6 +10,8 @@ if (!function_exists('testprojectwp_setup')){
             'flex-height' => false,
             'header-text' => '',
         ] );
+        //динамический тэг заголовка
+        add_theme_support('title-tag');
     }
     add_action('wp_enqueue_scripts', 'testprojectwp_script');
 
@@ -153,3 +156,33 @@ function testprojectwp_script()
         true
     );
 }
+//Регистрация нескольких областей меню
+function testprojectwp_menus()
+{
+    //сбор несколько зон меню
+    $menu = ( [
+        'header' => __('header menu', 'testprojectwp'),
+        'footer' => __('footer menu', 'testprojectwp'),
+    ] );
+    //регистрация областей
+register_nav_menus( $menu );
+}
+//хук событие
+add_action('init', 'testprojectwp_menus');
+//добавим класс nav-item ко всему меню
+add_filter('nav_menu_css_class', 'custom_nav_menu_css_class', 10, 1);
+//получение списка классов
+function custom_nav_menu_css_class($classes){
+    //добавление к списку классов свой класс
+    $classes[] = 'nav-item';
+    //возврат списка классов
+    return $classes;
+}
+//повесить на все ссылки свой класс
+add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_attibutes', 10, 1);
+function custom_nav_menu_link_attibutes($atts){
+    $atts['class'] = 'nav-link';
+    return $atts;
+}
+require_once('wp_files/bs4navwalker.php');
+register_nav_menu('top', 'Top menu');
