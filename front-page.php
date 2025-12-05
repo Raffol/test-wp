@@ -1,4 +1,9 @@
-<?php get_header();?>
+<?php
+/*
+Template Name: Главная
+Template Post Type: post, page, product, contacts
+*/
+get_header();?>
 <!--MAIN BANNER AREA START -->
 <div class="banner-area banner-3">
     <div class="overlay dark-overlay"></div>
