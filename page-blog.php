@@ -42,11 +42,12 @@ get_header();?>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="blog-post">
+                            <?php the_post_thumbnail( 'thumb', array( 'class' => "img-fluid")); ?>
                             <img src="<?php get_template_directory_uri()?>/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                             <div class="mt-4 mb-3 d-flex">
                                 <div class="post-author mr-3">
                                     <i class="fa fa-user"></i>
-                                    <span class="h6 text-uppercase">John mackel</span>
+                                    <span class="h6 text-uppercase"><?php the_author();?></span>
                                 </div>
 
                                 <div class="post-info">
@@ -54,9 +55,9 @@ get_header();?>
                                     <span><?php the_time('j F Y');?></span>
                                 </div>
                             </div>
-                            <a href="blog-single.html" class="h4 "><?php the_title();?></a>
+                            <a href="<?php get_the_permalink();?>" class="h4 "><?php the_title();?></a>
                             <p class="mt-3"><p><?php the_excerpt(); ?></p> <!--Отрывок поста-->
-                            <a href="blog-single.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a href="<?php get_the_permalink();?>" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
 

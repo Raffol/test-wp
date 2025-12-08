@@ -12,6 +12,8 @@ if (!function_exists('testprojectwp_setup')){
         ] );
         //динамический тэг заголовка
         add_theme_support('title-tag');
+        //миниатюры для постов и страниц
+        add_theme_support( 'post-thumbnails' );
     }
     add_action('wp_enqueue_scripts', 'testprojectwp_script');
 
