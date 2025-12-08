@@ -21,14 +21,14 @@ get_header();?>
                 // Кастомный запрос на посты
                 $query = new WP_Query([
                     'post_type'      => 'post',
-                    'posts_per_page' => 10
+                    'posts_per_page' => 5
                 ]);
 
                 if ( $query->have_posts() ) :
                     while ( $query->have_posts() ) : $query->the_post(); ?>
 
                         <article>
-                            <h2><?php the_title(); ?></h2>
+                            <h3><?php the_title(); ?></h3>
                             <?php the_excerpt(); ?>
                         </article>
 
@@ -51,11 +51,11 @@ get_header();?>
 
                                 <div class="post-info">
                                     <i class="fa fa-calendar-check"></i>
-                                    <span>19 jun 18</span>
+                                    <span><?php the_time('j F Y');?></span>
                                 </div>
                             </div>
-                            <a href="blog-single.html" class="h4 ">Marketing tips to grow your site template</a>
-                            <p class="mt-3">Distinctio nulla hic repudiandae aliquid sint architecto dolore similique amet laboriosam suscipit in officia rerum, pariatuz.</p>
+                            <a href="blog-single.html" class="h4 "><?php the_title();?></a>
+                            <p class="mt-3"><p><?php the_excerpt(); ?></p> <!--Отрывок поста-->
                             <a href="blog-single.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
