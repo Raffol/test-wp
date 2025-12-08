@@ -18,28 +18,37 @@ get_header();?>
                 <!-- Вывод постов, функции цикла: the_title() и т.д.(по умолчанию) -->
 
                 <?php
-                // Кастомный запрос на посты
+/*                // Кастомный запрос на посты
                 $query = new WP_Query([
                     'post_type'      => 'post',
                     'posts_per_page' => 5
                 ]);
 
                 if ( $query->have_posts() ) :
-                    while ( $query->have_posts() ) : $query->the_post(); ?>
+                    while ( $query->have_posts() ) : $query->the_post(); */?><!--
 
                         <article>
-                            <h3><?php the_title(); ?></h3>
-                            <?php the_excerpt(); ?>
+                            <h3><?php /*the_title(); */?></h3>
+                            <?php /*the_excerpt(); */?>
                         </article>
 
-                    <?php endwhile;
+                    --><?php /*endwhile;
                 else :
                     echo 'Записей нет.';
                 endif;
 
                 wp_reset_postdata();
-                ?>
+                */?>
                 <div class="row">
+                    <?php
+                    // Кастомный запрос на посты
+                    $query = new WP_Query([
+                        'post_type'      => 'post',
+                        'posts_per_page' => 5
+                    ]);
+
+                    if ( $query->have_posts() ) :
+                    while ( $query->have_posts() ) : $query->the_post(); ?>
                     <div class="col-lg-6">
                         <div class="blog-post">
                             <?php the_post_thumbnail( 'thumb', array( 'class' => "img-fluid")); ?>
@@ -60,7 +69,13 @@ get_header();?>
                             <a href="<?php get_the_permalink();?>" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
+                    <?php endwhile;
+                    else :
+                        echo 'Записей нет.';
+                    endif;
 
+                    wp_reset_postdata();
+                    ?>
                     <div class="col-lg-6">
                         <div class="blog-post">
                             <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
