@@ -51,8 +51,16 @@ get_header();?>
                     while ( $query->have_posts() ) : $query->the_post(); ?>
                     <div class="col-lg-6">
                         <div class="blog-post">
+                            <?php //проверяет есть ли у поста прикрепленная к нему картинка миниатюра
+                            //должно находится внутри цикла
+                            if( has_post_thumbnail() ) {
+                                the_post_thumbnail('medium', ['class'=>"img-fluid"]);
+                            }
+                            else {
+                                echo '<img class="img-fluid" src="'.get_template_directory_uri().'/assets/img/blog/blog-1.jpg" />';
+                            }
+                            ?>
                             <?php the_post_thumbnail( 'thumb', array( 'class' => "img-fluid")); ?>
-                            <img src="<?php get_template_directory_uri()?>/assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                             <div class="mt-4 mb-3 d-flex">
                                 <div class="post-author mr-3">
                                     <i class="fa fa-user"></i>
