@@ -108,7 +108,7 @@ get_header();
 
                     wp_reset_postdata();
                     ?>
-
+<?php the_posts_pagination(); ?>
                 </div>
             </div>
 
