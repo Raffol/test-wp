@@ -35,7 +35,7 @@ get_header();
 
                                         <?php
                                         if (has_post_thumbnail()) {
-                                            the_post_thumbnail('medium', ['class' => "img-fluid w-100"]);
+                                            the_post_thumbnail('post_thumbnail', ['class' => "img-fluid w-100"]);
                                         } else {
                                             echo '<img class="img-fluid" src="'.get_template_directory_uri().'/assets/img/blog/blog-1.jpg" />';
                                         }
@@ -71,7 +71,7 @@ get_header();
 
                                         <?php
                                         if (has_post_thumbnail()) {
-                                            the_post_thumbnail('medium', ['class' => "img-fluid"]);
+                                            the_post_thumbnail('post_thumbnail', ['class' => "img-fluid"]);
                                         } else {
                                             echo '<img class="img-fluid" src="'.get_template_directory_uri().'/assets/img/blog/blog-1.jpg" />';
                                         }

@@ -14,6 +14,7 @@ if (!function_exists('testprojectwp_setup')){
         add_theme_support('title-tag');
         //миниатюры для постов и страниц
         add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 730, 480, true ); //размер миниатюры поста по умолчанию
     }
     add_action('wp_enqueue_scripts', 'testprojectwp_script');
 
@@ -188,3 +189,17 @@ function custom_nav_menu_link_attibutes($atts){
 }
 require_once('wp_files/bs4navwalker.php');
 register_nav_menu('top', 'Top menu');
+
+## отключаем создание миниатюр файлов для указанных размеров
+add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
+
+function delete_intermediate_image_sizes( $sizes ){
+
+    // размеры которые нужно удалить
+    return array_diff( $sizes, [
+        'medium_large',
+        'large',
+        '1536x1536',
+        '2048x2048',
+    ] );
+}
