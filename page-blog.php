@@ -19,7 +19,7 @@ get_header();
                     // Запрос постов
                     $query = new WP_Query([
                         'post_type'      => 'post',
-                        'posts_per_page' => 5
+                        'posts_per_page' => 6
                     ]);
 
                     $cnt = 0;
@@ -108,7 +108,9 @@ get_header();
 
                     wp_reset_postdata();
                     ?>
-<?php the_posts_pagination(); ?>
+                    <div class="col-lg-12">
+                        <?php the_posts_pagination(); ?>
+                    </div>
                 </div>
             </div>
 
@@ -117,6 +119,10 @@ get_header();
                 <div class="row">
 
                     <div class="col-lg-12">
+                        <?php if ( ! dynamic_sidebar('sidebar-blog') ) {
+                            dynamic_sidebar( 'sidebar-blog' );
+                        } ?>
+
                         <div class="sidebar-widget search">
                             <div class="form-group">
                                 <input type="text" placeholder="search" class="form-control">
