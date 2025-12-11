@@ -3,6 +3,16 @@
                 <?php if ( ! dynamic_sidebar('sidebar-blog') ) {
                     dynamic_sidebar( 'sidebar-blog' );
                 } ?>
+                <div class="row">
+
+                    <div class="col-lg-12">
+
+                    </div>
+
+                    <div class="col-lg-12">
+
+                    </div>
+
                     <div class="col-lg-12">
                         <div class="sidebar-widget category">
                             <h5 class="mb-3">Category</h5>
@@ -40,4 +50,6 @@
                             <a href="#"><i class="fa fa-file-pdf"></i> Company Profile</a>
                         </div>
                     </div>
+
+                </div>
             </aside>
