@@ -1,28 +1,8 @@
 <!-- САЙДБАР -->
-            <div class="col-lg-4">
+            <aside class="col-lg-4">
                 <?php if ( ! dynamic_sidebar('sidebar-blog') ) {
                     dynamic_sidebar( 'sidebar-blog' );
                 } ?>
-                <div class="row">
-
-                    <div class="col-lg-12">
-
-
-                        <div class="sidebar-widget search">
-                            <div class="form-group">
-                                <input type="text" placeholder="search" class="form-control">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="sidebar-widget about-bar">
-                            <h5 class="mb-3">About us</h5>
-                            <p>Nostrum ullam porro iusto. Fugit eveniet sapiente nobis nesciunt velit cum fuga doloremque dignissimos asperiores.</p>
-                        </div>
-                    </div>
-
                     <div class="col-lg-12">
                         <div class="sidebar-widget category">
                             <h5 class="mb-3">Category</h5>
@@ -60,6 +40,4 @@
                             <a href="#"><i class="fa fa-file-pdf"></i> Company Profile</a>
                         </div>
                     </div>
-
-                </div>
-            </div>
+            </aside>
